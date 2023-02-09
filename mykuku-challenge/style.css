@@ -273,6 +273,24 @@ circle + circle + circle + circle + circle + circle {
   font-variant: small-caps;
 
   color: rgba(18, 36, 72, 0.9);
-  overflow: visible;
+}
+
+.p{
+  width: 32px;
+  height: 14px;
+  position:absolute;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+  font-variant: small-caps;
+
+  color: rgba(18, 36, 72, 0.9);
 }
 

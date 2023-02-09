@@ -15,7 +15,7 @@ const max = arr.reduce((acc, [x, y]) => (acc > y ? acc : y), 0);
 
 const height = 300;
 const interval = 45;
-const padding = -5;
+const padding = -7;
 const lineInterval = 14;
 
 const data = arr.map(([x, y], i) => {
@@ -64,13 +64,21 @@ const data = arr.map(([x, y], i) => {
   document.getElementById("chart-svg").appendChild(dottedLine);
   
   if(i === 0 || i === arr.length - 1){
-    price.setAttribute("x", i * interval);
-    price.setAttribute("y", height - y - 5);
-    price.setAttribute("fill", '#122448');
-    price.classList = 'price'
-    price.innerHTML = `$${originalValue}K`
-    console.log(price)
-    document.getElementById("chart-svg").appendChild(price);
+    // price.setAttribute("x", i * interval);
+    // price.setAttribute("y", height - y - 5);
+    // price.setAttribute("fill", '#122448');
+    // price.classList = 'price'
+    // price.innerHTML = `$${originalValue}K`
+    // console.log(price)
+    // document.getElementById("chart-svg").appendChild(price);
+
+    let p = document.createElement('span')
+    p.innerHTML = `$${originalValue}K`
+    p.classList = 'p'
+    p.style.top = `${height - y - 5 +50}px`
+    p.style.left = `${i * interval + 12}px`
+    $('.card').append(p)
+    console.log(p)
   }
   
   return [i * interval + padding + 20, height - y - padding];
