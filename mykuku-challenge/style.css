@@ -203,30 +203,24 @@ svg {
   position: absolute;
 }
 
-circle {
+.circle-animation0 {
   animation: fadeInDown 0.3s both;
 }
-circle + circle {
-  animation-delay: 0.3s;
+.circle-animation1 {
+    animation: fadeInDown 0.3s both 2s;
+  }
+.circle-animation2 {
+    animation: fadeInDown 0.3s both 2.3s;
 }
-circle + circle + circle {
-  animation-delay: 0.4s;
+.circle-animation3 {
+    animation: fadeInDown 0.3s both 2.6s;
 }
-circle + circle + circle + circle {
-  animation-delay: 0.5s;
+.circle-animation4 {
+    animation: fadeInDown 0.3s both 2.9s;
 }
-circle + circle + circle + circle + circle {
-  animation-delay: 0.6s;
+.circle-animation5 {
+    animation: fadeInDown 0.3s both 3.2s;
 }
-circle + circle + circle + circle + circle + circle {
-  animation-delay: 0.7s;
-}
-
-#linea {
-  animation: fadeInUp 0.3s both;
-  animation-delay: 0.9s;
-}
-
 #dates{
   
   margin-left: 15px;
@@ -294,3 +288,15 @@ circle + circle + circle + circle + circle + circle {
   color: rgba(18, 36, 72, 0.9);
 }
 
+.line-animation {
+    stroke-dasharray: 10000;
+    stroke-dashoffset: 10000;
+    animation: move 1s linear; 
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes move {
+    100% {
+        stroke-dashoffset: 0;
+    }
+  }
