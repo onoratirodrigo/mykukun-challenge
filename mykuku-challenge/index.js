@@ -35,8 +35,7 @@ const drawGraphic = (arr, delay) =>{
             circle.classList = `circle-animation${i}`
             $('#linea').addClass('line-animation')
         }
-      
-      console.log(x,y,i, max, min)
+
       
       circle.setAttribute("cx", i * interval + padding + 20);
       circle.setAttribute("cy", height - y - padding);

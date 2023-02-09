@@ -289,9 +289,9 @@ svg {
 }
 
 .line-animation {
-    stroke-dasharray: 10000;
-    stroke-dashoffset: 10000;
-    animation: move 1s linear; 
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: move 2s linear; 
     animation-fill-mode: forwards;
   }
   
